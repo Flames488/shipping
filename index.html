@@ -47,8 +47,23 @@
           Calculate Shipping
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
         </a>
+        <button type="button" class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobileMenu">
+          <span></span>
+        </button>
       </div>
     </div>
+    <nav id="mobileMenu" class="mobile-menu">
+      <a href="index.html" class="nav-link active">Home</a>
+      <a href="services.html" class="nav-link">Services</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="services.html#rates" class="nav-link">Rates</a>
+      <a href="#" class="nav-link">FAQ</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+      <a href="contact.html" class="btn-primary mobile-cta" style="padding:13px 22px;border-radius:999px;font-size:14px;font-weight:700;display:inline-flex;align-items:center;justify-content:center;gap:8px;">
+        Calculate Shipping
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </nav>
   </header>
 
   <!-- ============ HERO ============ -->
@@ -256,25 +271,16 @@
       </div>
 
       <div style="position:relative;height:440px;">
-        <div style="position:absolute;left:0;top:0;width:64%;height:100%;border-radius:var(--radius-lg);overflow:hidden;box-shadow:0 30px 60px -30px rgba(21,23,27,0.35);background:linear-gradient(160deg,#2b2e34 0%,#15171b 65%);">
-          <svg width="100%" height="100%" viewBox="0 0 340 440" preserveAspectRatio="xMidYMid slice" style="position:absolute;inset:0;opacity:0.5;">
-            <g stroke="#ffffff" stroke-opacity="0.25" stroke-width="1">
-              <line x1="0" y1="60" x2="340" y2="60"/><line x1="0" y1="140" x2="340" y2="140"/>
-              <line x1="0" y1="220" x2="340" y2="220"/><line x1="0" y1="300" x2="340" y2="300"/>
-              <line x1="0" y1="380" x2="340" y2="380"/>
-              <line x1="70" y1="0" x2="70" y2="440"/><line x1="140" y1="0" x2="140" y2="440"/>
-              <line x1="210" y1="0" x2="210" y2="440"/><line x1="280" y1="0" x2="280" y2="440"/>
-            </g>
-          </svg>
-          <svg width="150" height="150" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-opacity="0.4" stroke-width="1.1" style="position:absolute;right:12px;bottom:16px;"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6M9 10h.01M15 10h.01M9 14h.01M15 14h.01"/></svg>
-          <div style="position:absolute;left:0;right:0;bottom:0;padding:20px;background:linear-gradient(0deg,rgba(0,0,0,0.55),transparent);">
+        <div style="position:absolute;left:0;top:0;width:64%;height:100%;border-radius:var(--radius-lg);overflow:hidden;box-shadow:0 30px 60px -30px rgba(21,23,27,0.35);background:#15171b;">
+          <img src="https://images.unsplash.com/photo-1553413077-190dd305871c?auto=format&fit=crop&w=900&q=80" alt="Warehouse fulfillment shelving and pallets" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
+          <div style="position:absolute;left:0;right:0;bottom:0;padding:20px;background:linear-gradient(0deg,rgba(0,0,0,0.6),transparent);">
             <span style="color:#fff;font-size:13px;font-weight:700;">Warehouse &amp; Fulfillment</span>
           </div>
         </div>
 
-        <div style="position:absolute;right:0;bottom:0;width:52%;height:64%;border-radius:var(--radius-lg);overflow:hidden;box-shadow:0 30px 60px -30px rgba(21,23,27,0.35);background:linear-gradient(160deg,#c47a45 0%,#a8622f 75%);border:6px solid var(--paper-soft);">
-          <svg width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-opacity="0.5" stroke-width="1.1" style="position:absolute;right:6px;top:8px;"><path d="M2 21h19M4 18l4-14 4 14M9 11h4M13 18V9l7 3v6"/></svg>
-          <div style="position:absolute;left:0;right:0;bottom:0;padding:16px;background:linear-gradient(0deg,rgba(0,0,0,0.4),transparent);">
+        <div style="position:absolute;right:0;bottom:0;width:52%;height:64%;border-radius:var(--radius-lg);overflow:hidden;box-shadow:0 30px 60px -30px rgba(21,23,27,0.35);background:#a8622f;border:6px solid var(--paper-soft);">
+          <img src="https://images.unsplash.com/photo-1580674285054-bed31e145f59?auto=format&fit=crop&w=700&q=80" alt="Aerial view of port container operations" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
+          <div style="position:absolute;left:0;right:0;bottom:0;padding:16px;background:linear-gradient(0deg,rgba(0,0,0,0.45),transparent);">
             <span style="color:#fff;font-size:13px;font-weight:700;">Port Operations</span>
           </div>
         </div>
@@ -429,5 +435,21 @@
     </div>
   </footer>
 
+  <script>
+    var navToggle = document.getElementById('navToggle');
+    var mobileMenu = document.getElementById('mobileMenu');
+    navToggle.addEventListener('click', function () {
+      var open = mobileMenu.classList.toggle('open');
+      navToggle.classList.toggle('open', open);
+      navToggle.setAttribute('aria-expanded', open);
+    });
+    mobileMenu.querySelectorAll('a').forEach(function (link) {
+      link.addEventListener('click', function () {
+        mobileMenu.classList.remove('open');
+        navToggle.classList.remove('open');
+        navToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+  </script>
 </body>
 </html>
