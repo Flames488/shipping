@@ -40,7 +40,7 @@
             <span style="font-size:11px;color:var(--muted);">[YOUR BUSINESS HOURS]</span>
           </div>
         </div>
-        <a href="contact.html" class="btn-primary" style="padding:12px 22px;border-radius:999px;font-size:14px;font-weight:700;display:inline-flex;align-items:center;gap:8px;white-space:nowrap;">
+        <a href="contact.html" class="btn-primary nav-cta" style="padding:12px 22px;border-radius:999px;font-size:14px;font-weight:700;display:inline-flex;align-items:center;gap:8px;white-space:nowrap;">
           Calculate Shipping
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
         </a>
@@ -176,7 +176,7 @@
       </p>
 
       <div class="rate-table" style="background:var(--paper);border-radius:var(--radius-md);border:1px solid var(--line);overflow:hidden;">
-        <div class="rate-row" style="display:grid;grid-template-columns:1.4fr 1fr 1.4fr 1fr;gap:16px;padding:18px 28px;background:var(--paper-soft);">
+        <div class="rate-row rate-head" style="display:grid;grid-template-columns:1.4fr 1fr 1.4fr 1fr;gap:16px;padding:18px 28px;background:var(--paper-soft);">
           <span style="font-size:12px;font-weight:700;letter-spacing:0.06em;color:var(--muted);">SERVICE</span>
           <span style="font-size:12px;font-weight:700;letter-spacing:0.06em;color:var(--muted);">TRANSIT TIME</span>
           <span style="font-size:12px;font-weight:700;letter-spacing:0.06em;color:var(--muted);">BEST FOR</span>
@@ -185,33 +185,33 @@
 
         <div class="rate-row" style="display:grid;grid-template-columns:1.4fr 1fr 1.4fr 1fr;gap:16px;padding:20px 28px;align-items:center;">
           <span style="font-size:14.5px;font-weight:700;">Air Freight</span>
-          <span style="font-size:14px;color:var(--ink-soft);">3–7 days</span>
-          <span style="font-size:14px;color:var(--ink-soft);">Urgent, high-value cargo</span>
-          <span style="font-size:14.5px;font-weight:700;text-align:right;">[PRICE] / kg</span>
+          <span data-label="TRANSIT TIME" style="font-size:14px;color:var(--ink-soft);">3–7 days</span>
+          <span data-label="BEST FOR" style="font-size:14px;color:var(--ink-soft);">Urgent, high-value cargo</span>
+          <span data-label="FROM" style="font-size:14.5px;font-weight:700;text-align:right;">[PRICE] / kg</span>
         </div>
         <div class="rate-row" style="display:grid;grid-template-columns:1.4fr 1fr 1.4fr 1fr;gap:16px;padding:20px 28px;align-items:center;">
           <span style="font-size:14.5px;font-weight:700;">Sea Freight — FCL</span>
-          <span style="font-size:14px;color:var(--ink-soft);">20–35 days</span>
-          <span style="font-size:14px;color:var(--ink-soft);">Large, full-container volume</span>
-          <span style="font-size:14.5px;font-weight:700;text-align:right;">[PRICE] / container</span>
+          <span data-label="TRANSIT TIME" style="font-size:14px;color:var(--ink-soft);">20–35 days</span>
+          <span data-label="BEST FOR" style="font-size:14px;color:var(--ink-soft);">Large, full-container volume</span>
+          <span data-label="FROM" style="font-size:14.5px;font-weight:700;text-align:right;">[PRICE] / container</span>
         </div>
         <div class="rate-row" style="display:grid;grid-template-columns:1.4fr 1fr 1.4fr 1fr;gap:16px;padding:20px 28px;align-items:center;">
           <span style="font-size:14.5px;font-weight:700;">Sea Freight — LCL</span>
-          <span style="font-size:14px;color:var(--ink-soft);">25–40 days</span>
-          <span style="font-size:14px;color:var(--ink-soft);">Smaller, shared-container loads</span>
-          <span style="font-size:14.5px;font-weight:700;text-align:right;">[PRICE] / CBM</span>
+          <span data-label="TRANSIT TIME" style="font-size:14px;color:var(--ink-soft);">25–40 days</span>
+          <span data-label="BEST FOR" style="font-size:14px;color:var(--ink-soft);">Smaller, shared-container loads</span>
+          <span data-label="FROM" style="font-size:14.5px;font-weight:700;text-align:right;">[PRICE] / CBM</span>
         </div>
         <div class="rate-row" style="display:grid;grid-template-columns:1.4fr 1fr 1.4fr 1fr;gap:16px;padding:20px 28px;align-items:center;">
           <span style="font-size:14.5px;font-weight:700;">Road Freight</span>
-          <span style="font-size:14px;color:var(--ink-soft);">1–5 days</span>
-          <span style="font-size:14px;color:var(--ink-soft);">Regional and cross-border delivery</span>
-          <span style="font-size:14.5px;font-weight:700;text-align:right;">[PRICE] / km</span>
+          <span data-label="TRANSIT TIME" style="font-size:14px;color:var(--ink-soft);">1–5 days</span>
+          <span data-label="BEST FOR" style="font-size:14px;color:var(--ink-soft);">Regional and cross-border delivery</span>
+          <span data-label="FROM" style="font-size:14.5px;font-weight:700;text-align:right;">[PRICE] / km</span>
         </div>
-        <div style="display:grid;grid-template-columns:1.4fr 1fr 1.4fr 1fr;gap:16px;padding:20px 28px;align-items:center;">
+        <div class="rate-row" style="display:grid;grid-template-columns:1.4fr 1fr 1.4fr 1fr;gap:16px;padding:20px 28px;align-items:center;">
           <span style="font-size:14.5px;font-weight:700;">Customs Clearance</span>
-          <span style="font-size:14px;color:var(--ink-soft);">1–3 days</span>
-          <span style="font-size:14px;color:var(--ink-soft);">Any inbound or outbound shipment</span>
-          <span style="font-size:14.5px;font-weight:700;text-align:right;">[PRICE] / shipment</span>
+          <span data-label="TRANSIT TIME" style="font-size:14px;color:var(--ink-soft);">1–3 days</span>
+          <span data-label="BEST FOR" style="font-size:14px;color:var(--ink-soft);">Any inbound or outbound shipment</span>
+          <span data-label="FROM" style="font-size:14.5px;font-weight:700;text-align:right;">[PRICE] / shipment</span>
         </div>
       </div>
 

@@ -62,7 +62,7 @@ a:hover{color:var(--accent);}
 }
 
 @media (max-width:980px){
-  .nav-center, .nav-contact{display:none !important;}
+  .nav-center, .nav-contact, .nav-cta{display:none !important;}
   .hero-grid{grid-template-columns:1fr !important;}
   .hero-visual{margin-top:40px;}
   .about-grid, .story-grid, .contact-grid{grid-template-columns:1fr !important;}
@@ -96,8 +96,8 @@ a:hover{color:var(--accent);}
 .nav-toggle.open span::before{transform:translateY(6px) rotate(45deg);}
 .nav-toggle.open span::after{transform:translateY(-6px) rotate(-45deg);}
 
-.mobile-menu{display:none;flex-direction:column;gap:2px;background:var(--paper);border-bottom:1px solid var(--line);box-shadow:0 20px 40px -24px rgba(21,23,27,0.25);}
-.mobile-menu.open{display:flex;}
+.mobile-menu{display:flex;flex-direction:column;gap:2px;background:var(--paper);border-bottom:1px solid var(--line);box-shadow:0 20px 40px -24px rgba(21,23,27,0.25);max-height:0;overflow:hidden;opacity:0;transition:max-height .28s ease, opacity .2s ease;}
+.mobile-menu.open{max-height:520px;opacity:1;}
 .mobile-menu a.nav-link{padding:14px 24px;border-bottom:1px solid var(--line);font-size:15px;}
 .mobile-menu a.nav-link.active{background:var(--paper-soft);}
 .mobile-menu .mobile-cta{margin:16px 24px 20px;}
@@ -123,4 +123,20 @@ a:hover{color:var(--accent);}
   .about-hero-content h1{font-size:30px !important;}
   .about-hero-actions a{width:100%;justify-content:center;}
   .trust-grid{row-gap:24px;}
+}
+
+/* ---- Reduce the site-wide 48px section gutter on phones ---- */
+@media (max-width:700px){
+  [style*="max-width:1280px"]{padding-left:20px !important;padding-right:20px !important;}
+}
+@media (max-width:420px){
+  [style*="max-width:1280px"]{padding-left:16px !important;padding-right:16px !important;}
+}
+
+/* ---- Rates table: stack into labeled cards instead of squeezing 4 columns ---- */
+@media (max-width:700px){
+  .rate-head{display:none !important;}
+  .rate-row{grid-template-columns:1fr !important;gap:6px !important;padding:18px 20px !important;}
+  .rate-row span{text-align:left !important;}
+  .rate-row span[data-label]::before{content:attr(data-label);display:block;font-size:10.5px;font-weight:700;letter-spacing:0.06em;color:var(--muted);margin-bottom:2px;}
 }
